@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/pawarvishal/golangtraining/04_scope/closure"
 	"github.com/pawarvishal/golangtraining/04_scope/vis"
 )
 
@@ -19,6 +20,10 @@ func main() {
 
 	foo(y)
 	fmt.Println(vis.MyFunc())
+
+	increment := closure.Wrapper()
+	fmt.Println(increment())
+	fmt.Println(increment())
 }
 
 func foo(z int) {
